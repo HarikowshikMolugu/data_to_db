@@ -56,7 +56,7 @@ const server = http.createServer((req, res) => {
       });
     });
   } else {
-    // Return a 404 Not Found for other routes
+    
     res.statusCode = 404;
     res.end('Not Found');
   }
