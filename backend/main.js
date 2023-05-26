@@ -1,3 +1,4 @@
+//used xampp
 const http = require('http');
 const url = require('url');
 const mysql = require('mysql');
@@ -40,7 +41,7 @@ const server = http.createServer((req, res) => {
         // Insert form data into the database
         const sql = `INSERT INTO formdata (name, email, phoneNumber) VALUES (?, ?, ?)`;
         connection.query(sql, [name, email, phoneNumber], (err) => {
-          connection.release(); // Release the connection back to the pool
+          connection.release(); 
 
           if (err) {
             console.error('Error saving form data:', err);
